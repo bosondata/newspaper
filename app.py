@@ -17,6 +17,7 @@ def extract():
     """
     """
     html = request.body.read()
+    extracted = ''
 
     for lang in ('zh', 'en'):
         try:
