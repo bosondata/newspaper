@@ -110,10 +110,11 @@ class StopWordsChinese(StopWords):
         super(StopWordsChinese, self).__init__(language='zh')
 
     def candidate_words(self, stripped_input):
-        # jieba builds a tree that takes a while. avoid building
-        # this tree if we don't use the chinese language
-        import jieba
-        return jieba.cut(stripped_input, cut_all=True)
+        """
+        TODO: return a list of bi-gram & tri-gram
+        TODO: update stopwords-zh.txt to a spam word list
+        """
+        return list(stripped_input)
 
 
 class StopWordsArabic(StopWords):
